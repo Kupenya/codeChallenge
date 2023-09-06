@@ -17,7 +17,8 @@ const getSuggestions = async (req, res) => {
 
     const suggestions = users.map((user) => ({
       name: `${user.firstname} ${user.lastname}`,
-      location: user.location,
+      phone: user.phone,
+      address: user.address,
     }));
 
     res.json({ suggestions });
